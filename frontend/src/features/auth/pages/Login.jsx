@@ -91,7 +91,7 @@ export default function Login() {
               id="password"
               label="Password"
               type="password"
-              placeholder="••••••••"
+              placeholder="Enter Your Password"
               rightSlot={<Eye size={16} style={{ color: colors.textFaint }} />}
             />
 
