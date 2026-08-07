@@ -51,6 +51,11 @@ function Field({ id, label, type = 'text', placeholder, rightSlot }) {
 }
 
 export default function Login() {
+
+  const handleSubmit = (e)=>{
+    e.preventDefault()
+
+  }
   return (
     <div className="min-h-screen w-full flex" style={{ backgroundColor: colors.bg }}>
       <style>{fontImport}</style>
@@ -84,7 +89,7 @@ export default function Login() {
             </p>
           </div>
 
-          <form>
+          <form onSubmit={handleSubmit}>
             <Field id="email" label="Email" type="email" placeholder="you@example.com" />
 
             <Field
@@ -120,8 +125,8 @@ export default function Login() {
             </div>
 
             <button
-              type="button"
-              className="w-full flex items-center justify-center gap-2 rounded-lg py-3 text-sm"
+              type='submit'
+              className="w-full flex items-center justify-center gap-2 rounded-lg py-3 text-sm cursor-pointer "
               style={{
                 backgroundColor: colors.accent,
                 color: '#08201D',
@@ -135,7 +140,7 @@ export default function Login() {
 
           <p className="mt-8 text-sm text-center" style={{ color: colors.textMuted, fontFamily: "'Inter', sans-serif" }}>
             Don't have an account?{' '}
-            <a href="#" style={{ color: colors.accent }} className="hover:underline">
+            <a href="/register" style={{ color: colors.accent }} className="hover:underline">
               Sign up
             </a>
           </p>
