@@ -48,7 +48,8 @@ Vector-Job/
                 │   ├── Login.jsx
                 │   └── Register.jsx
                 └── services/
-                    └── auth.api.js  # Axios calls to the auth API
+                |    └── auth.api.js  # Axios calls to the auth API 
+                └── auth.context.js   # Authentication Context
 ```
 
 The backend follows a `routes → controllers → models` structure, and the frontend is organized by feature (`features/auth/...`) rather than by file type, so each feature's pages, services, and (eventually) components live together.
